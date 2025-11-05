@@ -17,7 +17,7 @@ public class LegacySystem implements CustomerDataViaUsb {
      * Need to be able to simulate a null return when customer is not found
      * Rather than just returning a dummy customer every time
      */ 
-    private final Map<Integer, Customer> usbStorage = new HashMap<>();
+    private Map<Integer, Customer> usbStorage = new HashMap<>();
 
     public LegacySystem() {
         // Example data to store, pretend it is in the usb storage

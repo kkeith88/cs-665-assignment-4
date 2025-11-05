@@ -20,12 +20,11 @@ For each assignment, please answer the following:
 
 - Explain the level of flexibility in your implementation, including how new object types can
 be easily added or removed in the future.
-    - In this assignment, my implementation is highly flexible because the system is built around interfaces (`CustomerDataViaUsb` and `CustomerDataViaHttps`). This allows for new data sources or connection types to be added in the future without modifying existing code.
+    - In this assignment, my implementation is highly flexible because the system is built around interfaces `CustomerDataViaUsb` and `CustomerDataViaHttps`. This allows for new data sources or connection types to be added in the future without modifying existing code.
     - Similarly, if another legacy system were introduced (for example, one that retrieves data from a local database instead of a USB drive), the adapter could be easily modified or replaced to work with that system
 - Discuss the simplicity and understandability of your implementation, ensuring that it is
 easy for others to read and maintain.
     - My approach was to keep the design simple and easy to follow, while still demonstrating a clear use of the Adapter design pattern.
-        - The relationships between classes are intuitive
         - The legacy system `LegacySystem` simulates customer data stored on a USB drive.
         - The new system `CustomerDataViaHttps` defines how customer data should be accessed over HTTPS.
         - The adapter `UsbToHttpsAdapter` bridges the two, making the legacy system compatible with the new system’s interface.
@@ -39,6 +38,8 @@ chosen.
 
 ### Design Choices / Assumptions / Thought Process:
 Initially when reading the assignment requirements it stated that we needed something to facilitate the integration of 2 non compatible systems. This lead me to choose the adapter pattern based on my memory from class instruction. By using the uml from the slides as a guide it became pretty clear what classes I would need.
+
+Also the on the assignment it notes, you’ll need to be able to use the new system’s interface with the old system’s API, I interpreted this as making the old api useable with the new system. So taking the legacy one and making it compatible with future code.
 
 
 # UML Diagram
